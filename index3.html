@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Zermatt – Ski Resort</title>
+    <link rel="stylesheet" href="zermatt.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">🏔️ Zermatt</div>
+        <nav class="nav">
+            <button class="home-btn" onclick="goHome()">Home</button>
+            <button class="book-btn" onclick="openBooking()">Book now</button>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="left">
+            <div class="main-image"></div>
+
+            <div class="card">
+                <h2>Ski Conditions</h2>
+                <p>
+                    Zermatt offers world‑class slopes, glacier skiing, breathtaking Matterhorn views,
+                    and perfectly maintained pistes for all skill levels.
+                </p>
+            </div>
+        </section>
+
+        <section class="right">
+            <div class="card">
+                <h2>Description</h2>
+                <p>
+                    Zermatt is one of the most iconic ski resorts in Switzerland, located at the foot
+                    of the legendary Matterhorn. Known for luxury hotels, premium skiing, and
+                    unforgettable alpine atmosphere.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Facilities</h2>
+                <ul>
+                    <li>Luxury hotels & chalets</li>
+                    <li>Glacier skiing all year round</li>
+                    <li>Fine dining & Swiss cuisine</li>
+                    <li>Premium ski schools</li>
+                    <li>High‑end shopping & après‑ski</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="img big img1"><span class="caption">Matterhorn view</span></div>
+            <div class="img img2"><span class="caption">Ski lifts</span></div>
+            <div class="img tall img3"><span class="caption">Glacier slopes</span></div>
+            <div class="img img4"><span class="caption">Village at night</span></div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        © 2026 European Ski Resorts · Feel the Alps
+    </footer>
+
+    <!-- Booking modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <h2>Book your stay</h2>
+            <p>Leave your contact details and we will reach out to you.</p>
+            <input type="text" placeholder="Your name">
+            <input type="email" placeholder="Email address">
+            <button onclick="closeBooking()">Send request</button>
+        </div>
+    </div>
+
+    <script src="zermatt.js"></script>
+</body>
+
+</html>

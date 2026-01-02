@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wintera</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ===== HERO SECTION ===== -->
+  <header class="hero">
+    <div class="header-container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <svg class="logo-icon" viewBox="0 0 121 99" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-label="Wintera logo">
+          <path
+            d="M3.18608 88.4305L42.0145 21.4854C43.9527 18.1438 48.7867 18.1686 50.6904 21.53L88.6039 88.4752C90.4916 91.8083 88.0838 95.9391 84.2532 95.9391H7.51123C3.6578 95.9391 1.25274 91.7639 3.18608 88.4305Z"
+            stroke="white" stroke-width="5" />
+          <path
+            d="M96.6218 95.9391H113.456C117.241 95.9391 119.653 91.8982 117.858 88.567L91.3558 39.3929C89.6845 36.2918 85.416 35.8453 83.139 38.5334L69.8311 54.2449"
+            stroke="white" stroke-width="5" />
+          <path d="M85.8311 95.9391H99.8311" stroke="white" stroke-width="5" />
+          <path d="M50.8311 21.4106L61.8065 4.75008C64.0046 1.41337 69.0351 1.87549 70.5886 5.55684L83.8311 36.9391"
+            stroke="white" stroke-width="5" />
+          <path
+            d="M54.8311 14.9391L56.917 18.4378C58.0783 20.3857 60.8303 20.5677 62.2381 18.7898C63.6815 16.9669 66.5186 17.2138 67.6255 19.2585L70.4516 24.4789C71.7795 26.9319 74.8577 27.8239 77.2915 26.4611L78.8311 25.599"
+            stroke="white" stroke-width="5" />
+          <path
+            d="M68.8311 54.5249L64.2093 59.8503C61.6562 62.7922 56.8684 61.8139 55.674 58.1062L55.5586 57.7481C54.3395 53.9639 49.4053 53.0473 46.9085 56.1411L38.0628 67.1019C36.0573 69.5868 32.2681 69.5807 30.2707 67.0892L21.8311 56.562"
+            stroke="white" stroke-width="5" />
+          <path
+            d="M75.8311 46.9391L81.8803 54.7646C83.2699 56.5622 86.1301 55.8836 86.5641 53.6534C86.9374 51.7351 89.192 50.8719 90.7509 52.0505L103.831 61.9391"
+            stroke="white" stroke-width="5" />
+        </svg>
+
+        <span class="logo-text">Wintera</span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Choose</a>
+        <a href="#">About us</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="#" class="btn-primary">Book now</a>
+    </div>
+
+    <div class="hero-content">
+      <h1>Find your perfect ski resort</h1>
+      <p>Discover your perfect winter getaway</p>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main">
+    <!-- FILTERS -->
+    <section class="filters">
+      <div class="filter-box">
+        <h4>SKILL LEVEL</h4>
+        <label><input type="checkbox" value="beginner" /> Beginner</label>
+        <label><input type="checkbox" value="intermediate" /> Intermediate</label>
+        <label><input type="checkbox" value="advanced" /> Advanced</label>
+      </div>
+
+      <div class="filter-box">
+        <h4>BUDGET</h4>
+        <input type="range" id="budgetRange" min="500" max="5000" value="2500" />
+        <p>Max budget: €<span id="budgetValue">2500</span></p>
+      </div>
+
+      <div class="filter-box">
+        <h4>LOCATION</h4>
+        <select id="countrySelect">
+          <option value="">All countries</option>
+          <option value="Ukraine">Ukraine</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="Bulgaria">Bulgaria</option>
+          <option value="France">France</option>
+          <option value="Poland">Poland</option>
+          <option value="Italy">Italy</option>
+        </select>
+      </div>
+
+      <div class="filter-box">
+        <h4>PREFERENCES</h4>
+        <label><input type="checkbox" /> Ski runs length</label>
+        <label><input type="checkbox" /> Chairlifts</label>
+        <label><input type="checkbox" /> Night skiing</label>
+        <label><input type="checkbox" /> Equipment rental</label>
+      </div>
+
+      <div class="filter-box">
+        <h4>Number of people</h4>
+        <label>
+          Adults
+          <select id="adultsSelect">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </label>
+
+        <label>
+          Children
+          <select id="childrenSelect">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </label>
+      </div>
+
+      <button class="search-btn">Search resorts</button>
+    </section>
+
+    <!-- RESORT RESULTS -->
+    <section class="results">
+      <h3>Search</h3>
+
+      <div class="resort-list" id="resortList">
+        <!-- Курорти додаються через JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about">
+    <div class="about-content">
+      <h2>About us</h2>
+      <p>
+        This website is designed to help you find the best ski resort based on
+        your budget.<br /><br />
+        We combine pricing logic, resort data, and winter conditions into one
+        simple tool that shows what you can actually afford — before you
+        book.<br /><br />
+        No endless searching. No surprises. Just smart winter planning.
+      </p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
