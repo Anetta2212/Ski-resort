@@ -9,19 +9,164 @@ const childrenSelect = document.getElementById("childrenSelect");
 
 // ===== DATA =====
 const resorts = [
-  { name: "Bukovel", price: 900, level: "beginner", country: "Ukraine", image: "script/bukovel.jpg" },
-  { name: "Zermatt", price: 3200, level: "advanced", country: "Switzerland", image: "script/zermatt.jpg" },
-  { name: "Bansko", price: 1200, level: "beginner", country: "Bulgaria", image: "script/bansko.jpg" },
-  { name: "Chamonix", price: 2800, level: "advanced", country: "France", image: "script/chamonix.jpg" },
-  { name: "Zakopane", price: 800, level: "intermediate", country: "Poland", image: "script/zakopane.jpg" },
-  { name: "Livigno", price: 2000, level: "intermediate", country: "Italy", image: "script/livigno.jpg" },
-  { name: "Jasná", price: 1100, level: "intermediate", country: "Slovakia", image: "./images/jasna.jpg" },
-  { name: "Sölden", price: 2600, level: "advanced", country: "Austria", image: "./images/solden.jpg" },
-  { name: "Cortina d'Ampezzo", price: 3000, level: "advanced", country: "Italy", image: "./images/cortina.jpg" },
-  { name: "Kranjska Gora", price: 1000, level: "beginner", country: "Slovenia", image: "./images/kranjska-gora.jpg" },
-  { name: "Špindlerův Mlýn", price: 950, level: "intermediate", country: "Czech Republic", image: "./images/spindleruv-mlyn.jpg" },
-  { name: "Poiana Brașov", price: 1050, level: "beginner", country: "Romania", image: "./images/poiana-brasov.jpg" }
+  {
+    name: "Bukovel",
+    price: 900,
+    level: "beginner",
+    country: "Ukraine",
+    image: "script/bukovel.jpg",
+    skiRuns: 75,
+    chairlifts: 17,
+    nightSkiing: true,
+    equipmentRental: true,
+    snowParks: true,
+    difficultyMix: { beginner: 40, intermediate: 45, advanced: 15 }
+  },
+  {
+    name: "Zermatt",
+    price: 3200,
+    level: "advanced",
+    country: "Switzerland",
+    image: "script/zermatt.jpg",
+    skiRuns: 200,
+    chairlifts: 32,
+    nightSkiing: false,
+    equipmentRental: true,
+    snowParks: true,
+    difficultyMix: { beginner: 20, intermediate: 50, advanced: 30 }
+  },
+  {
+    name: "Bansko",
+    price: 1200,
+    level: "beginner",
+    country: "Bulgaria",
+    image: "script/bansko.jpg",
+    skiRuns: 70,
+    chairlifts: 14,
+    nightSkiing: true,
+    equipmentRental: true,
+    snowParks: false,
+    difficultyMix: { beginner: 35, intermediate: 50, advanced: 15 }
+  },
+  {
+    name: "Chamonix",
+    price: 2800,
+    level: "advanced",
+    country: "France",
+    image: "script/chamonix.jpg",
+    skiRuns: 170,
+    chairlifts: 27,
+    nightSkiing: false,
+    equipmentRental: true,
+    snowParks: true,
+    difficultyMix: { beginner: 15, intermediate: 45, advanced: 40 }
+  },
+  {
+    name: "Zakopane",
+    price: 800,
+    level: "intermediate",
+    country: "Poland",
+    image: "script/zakopane.jpg",
+    skiRuns: 50,
+    chairlifts: 12,
+    nightSkiing: true,
+    equipmentRental: true,
+    snowParks: false,
+    difficultyMix: { beginner: 45, intermediate: 40, advanced: 15 }
+  },
+  {
+    name: "Livigno",
+    price: 2000,
+    level: "intermediate",
+    country: "Italy",
+    image: "script/livigno.jpg",
+    skiRuns: 115,
+    chairlifts: 31,
+    nightSkiing: true,
+    equipmentRental: true,
+    snowParks: true,
+    difficultyMix: { beginner: 30, intermediate: 50, advanced: 20 }
+  },
+  {
+    name: "Jasná",
+    price: 1100,
+    level: "intermediate",
+    country: "Slovakia",
+    image: "./images/jasna.jpg",
+    skiRuns: 50,
+    chairlifts: 18,
+    nightSkiing: true,
+    equipmentRental: true,
+    snowParks: true,
+    difficultyMix: { beginner: 35, intermediate: 45, advanced: 20 }
+  },
+  {
+    name: "Sölden",
+    price: 2600,
+    level: "advanced",
+    country: "Austria",
+    image: "./images/solden.jpg",
+    skiRuns: 144,
+    chairlifts: 31,
+    nightSkiing: false,
+    equipmentRental: true,
+    snowParks: true,
+    difficultyMix: { beginner: 20, intermediate: 50, advanced: 30 }
+  },
+  {
+    name: "Cortina d'Ampezzo",
+    price: 3000,
+    level: "advanced",
+    country: "Italy",
+    image: "./images/cortina.jpg",
+    skiRuns: 120,
+    chairlifts: 36,
+    nightSkiing: false,
+    equipmentRental: true,
+    snowParks: false,
+    difficultyMix: { beginner: 25, intermediate: 55, advanced: 20 }
+  },
+  {
+    name: "Kranjska Gora",
+    price: 1000,
+    level: "beginner",
+    country: "Slovenia",
+    image: "./images/kranjska-gora.jpg",
+    skiRuns: 20,
+    chairlifts: 6,
+    nightSkiing: true,
+    equipmentRental: true,
+    snowParks: false,
+    difficultyMix: { beginner: 60, intermediate: 30, advanced: 10 }
+  },
+  {
+    name: "Špindlerův Mlýn",
+    price: 950,
+    level: "intermediate",
+    country: "Czech Republic",
+    image: "./images/spindleruv-mlyn.jpg",
+    skiRuns: 27,
+    chairlifts: 11,
+    nightSkiing: true,
+    equipmentRental: true,
+    snowParks: true,
+    difficultyMix: { beginner: 40, intermediate: 45, advanced: 15 }
+  },
+  {
+    name: "Poiana Brașov",
+    price: 1050,
+    level: "beginner",
+    country: "Romania",
+    image: "./images/poiana-brasov.jpg",
+    skiRuns: 24,
+    chairlifts: 9,
+    nightSkiing: true,
+    equipmentRental: true,
+    snowParks: false,
+    difficultyMix: { beginner: 50, intermediate: 40, advanced: 10 }
+  }
 ];
+
 
 // ===== INIT =====
 renderResorts(resorts);
@@ -93,8 +238,49 @@ function openResort(name) {
   if (name === "Zermatt") {
     window.location.href = "zermatt.html";
   }
+}
 
-  if (name === "Bansko") {
-    window.location.href = "bansko.html";
+
+function openBooking(resortName = null) {
+  document.getElementById("bookingCenter").style.display = "flex";
+
+  if (resortName) {
+    document.getElementById("resortSelect").value = resortName;
   }
+
+  calculatePrice();
+}
+
+function closeBookingCenter() {
+  document.getElementById("bookingCenter").style.display = "none";
+}
+
+function calculatePrice() {
+  const type = document.getElementById("passType").value;
+  const days = Number(document.getElementById("days").value);
+
+  let base = 50;
+
+  if (type === "vip") base = 90;
+  if (type === "family") base = 120;
+
+  const total = base * days;
+  document.getElementById("totalPrice").textContent = total + " €";
+}
+
+document.addEventListener("input", calculatePrice);
+
+function confirmBooking() {
+  const resort = document.getElementById("resortSelect").value;
+  const days = document.getElementById("days").value;
+  const type = document.getElementById("passType").value;
+
+  alert(
+    `Your ski pass for ${resort} has been reserved!\n` +
+    `Type: ${type}\n` +
+    `Days: ${days}\n` +
+    `See you on the slopes ❄️⛷️`
+  );
+
+  closeBookingCenter();
 }
