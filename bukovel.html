@@ -1,83 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bukovel – Ski Resort</title>
   <link rel="stylesheet" href="bukovel.css">
 </head>
+
 <body>
 
-<header class="header">
-  <div class="logo">🏔️ Bukovel</div>
-  <nav class="nav">
-    <button class="home-btn" onclick="goHome()">Home</button>
-    <button class="book-btn" onclick="openBooking()">Book now</button>
-  </nav>
-</header>
+  <header class="header">
+    <div class="logo">🏔️ Bukovel</div>
+    <nav class="nav">
+      <button class="home-btn" onclick="goHome()">Home</button>
+      <button class="book-btn" onclick="openBooking('Bukovel')">Book now</button>
+    </nav>
+  </header>
 
-<main class="container">
+  <main class="container">
 
-  <section class="left">
-    <div class="main-image"></div>
+    <section class="left">
+      <div class="main-image"></div>
 
-    <div class="card">
-      <h2>Ski Conditions</h2>
-      <p>
-        Modern slopes of different difficulty levels, fast lifts,
-        artificial snow system and night skiing.
-      </p>
+      <div class="card">
+        <h2>Ski Conditions</h2>
+        <p>
+          Modern slopes of different difficulty levels, fast lifts,
+          artificial snow system and night skiing.
+        </p>
+      </div>
+    </section>
+
+    <section class="right">
+      <div class="card">
+        <h2>Description</h2>
+        <p>
+          Bukovel is the largest ski resort in Ukraine, located in the heart
+          of the Carpathian Mountains. Perfect for winter sports and
+          year-round mountain отдых.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Facilities</h2>
+        <ul>
+          <li>SPA & swimming pools</li>
+          <li>Restaurants & après-ski bars</li>
+          <li>Ski & snowboard rental</li>
+          <li>Ski schools</li>
+          <li>Family & kids activities</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="img big img1"><span class="caption">Main slopes</span></div>
+      <div class="img img2"><span class="caption">Lifts</span></div>
+      <div class="img tall img3"><span class="caption">Winter views</span></div>
+      <div class="img img4"><span class="caption">Après-ski</span></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    © 2026 Ukrainian Ski Resorts · Feel the mountains
+  </footer>
+
+  <!-- Booking modal -->
+  <div class="modal" id="bookingModal">
+    <div class="modal-content">
+      <h2>Book your stay</h2>
+      <p>Leave your contact details and we will reach out to you.</p>
+      <input type="text" placeholder="Your name">
+      <input type="email" placeholder="Email address">
+      <button onclick="closeBooking()">Send request</button>
     </div>
-  </section>
-
-  <section class="right">
-    <div class="card">
-      <h2>Description</h2>
-      <p>
-        Bukovel is the largest ski resort in Ukraine, located in the heart
-        of the Carpathian Mountains. Perfect for winter sports and
-        year-round mountain отдых.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Facilities</h2>
-      <ul>
-        <li>SPA & swimming pools</li>
-        <li>Restaurants & après-ski bars</li>
-        <li>Ski & snowboard rental</li>
-        <li>Ski schools</li>
-        <li>Family & kids activities</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="gallery">
-    <div class="img big img1"><span class="caption">Main slopes</span></div>
-    <div class="img img2"><span class="caption">Lifts</span></div>
-    <div class="img tall img3"><span class="caption">Winter views</span></div>
-    <div class="img img4"><span class="caption">Après-ski</span></div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  © 2026 Ukrainian Ski Resorts · Feel the mountains
-</footer>
-
-<!-- Booking modal -->
-<div class="modal" id="bookingModal">
-  <div class="modal-content">
-    <h2>Book your stay</h2>
-    <p>Leave your contact details and we will reach out to you.</p>
-    <input type="text" placeholder="Your name">
-    <input type="email" placeholder="Email address">
-    <button onclick="closeBooking()">Send request</button>
   </div>
-</div>
 
-<script src="bukovel.js"></script>
+  <script src="bukovel.js"></script>
 </body>
+
 </html>
-
-
