@@ -93,4 +93,8 @@ function openResort(name) {
   if (name === "Zermatt") {
     window.location.href = "zermatt.html";
   }
+
+  if (name === "Bansko") {
+    window.location.href = "bansko.html";
+  }
 }
