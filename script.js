@@ -230,7 +230,20 @@ function renderResorts(list) {
 }
 
 // ===== OPEN RESORT PAGE =====
-function openResort(name) { if (name === "Bukovel") { window.location.href = "bukovel.html"; } if (name === "Zermatt") { window.location.href = "zermatt.html"; } if (name === "Bansko") { window.location.href = "bansko.html"; } }
+function openResort(name) {
+  if (name === "Bukovel") {
+    window.location.href = "bukovel.html";
+  }
+
+  if (name === "Zermatt") {
+    window.location.href = "zermatt.html";
+  }
+
+  if (name === "Bansko") {
+    window.location.href = "bansko.html";
+  }
+}
+
 
 
 function openBooking(resortName = null) {
@@ -276,4 +289,5 @@ function confirmBooking() {
 
   closeBookingCenter();
 }
+
 
