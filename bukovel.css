@@ -210,9 +210,10 @@ body {
 }
 
 /* ================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN (PHONE + LAPTOP)
    ================================ */
 
+/* Для ноутбуків і середніх екранів */
 @media (max-width: 1200px) {
   .container {
     grid-template-columns: 1fr 1fr;
@@ -225,6 +226,7 @@ body {
   }
 }
 
+/* Для планшетів */
 @media (max-width: 900px) {
   .container {
     grid-template-columns: 1fr;
@@ -245,13 +247,23 @@ body {
   }
 }
 
+/* Для телефонів */
 @media (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+
   .container {
     padding: 20px 10px;
   }
 
   .main-image {
     height: 200px;
+    border-radius: 12px;
+  }
+
+  .card {
+    padding: 15px;
   }
 
   .gallery {
@@ -259,10 +271,18 @@ body {
     grid-auto-rows: 180px;
   }
 
+  .img {
+    border-radius: 12px;
+  }
+
   .caption {
     font-size: 16px;
     bottom: 10px;
     left: 10px;
+  }
+
+  .header {
+    padding: 15px;
   }
 
   .home-btn,
