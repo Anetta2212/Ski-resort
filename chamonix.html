@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chamonix – Ski Resort</title>
+    <link rel="stylesheet" href="chamonix.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">🏔️ Chamonix</div>
+        <nav class="nav">
+            <button class="home-btn" onclick="goHome()">Home</button>
+            <button class="book-btn" onclick="openBooking('Chamonix')">
+                Book now
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="left">
+            <!-- 🔵 ГОЛОВНЕ ФОТО — замінюється у chamonix.css -->
+            <div class="main-image"></div>
+
+            <div class="card">
+                <h2>Ski Conditions</h2>
+                <p>
+                    Chamonix offers legendary alpine terrain, steep slopes, glacier
+                    skiing, and breathtaking views of Mont Blanc.
+                </p>
+            </div>
+        </section>
+
+        <section class="right">
+            <div class="card">
+                <h2>Description</h2>
+                <p>
+                    Chamonix is one of the most iconic ski resorts in France, known for
+                    extreme skiing, charming alpine streets, and world‑class mountain
+                    scenery.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Facilities</h2>
+                <ul>
+                    <li>Glacier skiing</li>
+                    <li>Luxury hotels & chalets</li>
+                    <li>Mountain guides & ski schools</li>
+                    <li>Fine dining & après‑ski</li>
+                    <li>Mont Blanc cable car</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <!-- 🔵 ГАЛЕРЕЯ ФОТО — замінюється у chamonix.css -->
+            <div class="img big img1"><span class="caption">Mont Blanc view</span></div>
+            <div class="img img2"><span class="caption">Ski lifts</span></div>
+            <div class="img tall img3"><span class="caption">Glacier slopes</span></div>
+            <div class="img img4"><span class="caption">Chamonix village</span></div>
+        </section>
+    </main>
+
+    <footer class="footer">© 2026 European Ski Resorts · Feel the Alps</footer>
+
+    <!-- Booking modal -->
+    <div class="modal" id="bookingCenter">
+        <div class="booking-window">
+            <h2>Book Your Ski Pass</h2>
+
+            <label>Choose resort:</label>
+            <select id="resortSelect">
+                <option value="Chamonix">Chamonix</option>
+            </select>
+
+            <label>Choose pass type:</label>
+            <select id="passType">
+                <option value="standard">Standard Pass</option>
+                <option value="vip">VIP Pass</option>
+                <option value="family">Family Pass</option>
+            </select>
+
+            <label>Days:</label>
+            <input type="number" id="days" min="1" value="1" />
+
+            <label>Your level:</label>
+            <select id="level">
+                <option value="advanced">Advanced</option>
+            </select>
+
+            <div class="price-box">
+                <span>Total price:</span>
+                <strong id="totalPrice">0 €</strong>
+            </div>
+
+            <button class="confirm-btn" onclick="confirmBooking()">
+                Confirm Booking
+            </button>
+            <button class="close-btn" onclick="closeBookingCenter()">Close</button>
+        </div>
+    </div>
+
+    <script src="chamonix.js"></script>
+</body>
+
+</html>
