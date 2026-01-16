@@ -231,28 +231,22 @@ function renderResorts(list) {
 
 // ===== OPEN RESORT PAGE =====
 function openResort(name) {
-  const pages = {
-    "Bukovel": "bukovel.html",
-    "Zermatt": "zermatt.html",
-    "Bansko": "bansko.html",
-    "Chamonix": "chamonix.html",
-    "Zakopane": "zakopane.html",
-    "Livigno": "livigno.html",
-    "Jasná": "jasna.html",
-    "Sölden": "solden.html",
-    "Cortina d'Ampezzo": "cortina.html",
-    "Kranjska Gora": "kranjska-gora.html",
-    "Špindlerův Mlýn": "spindleruv-mlyn.html",
-    "Poiana Brașov": "poiana-brasov.html"
-  };
+  if (name === "Bukovel") {
+    window.location.href = "bukovel.html";
+  }
 
-  if (pages[name]) {
-    window.location.href = pages[name];
-  } else {
-    console.error("No page found for:", name);
+  if (name === "Zermatt") {
+    window.location.href = "zermatt.html";
+  }
+
+  if (name === "Bansko") {
+    window.location.href = "bansko.html";
+  }
+
+  if (name === "Chamonix") {
+    window.location.href = "chamonix.html";
   }
 }
-
 
 
 
@@ -299,6 +293,3 @@ function confirmBooking() {
 
   closeBookingCenter();
 }
-
-
-
