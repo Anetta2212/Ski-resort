@@ -34,6 +34,7 @@ scrollBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+/* Booking functions */
 function openBooking(resortName = null) {
     document.getElementById("bookingCenter").style.display = "flex";
 
