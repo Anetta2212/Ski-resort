@@ -68,12 +68,38 @@
 
     <!-- Booking modal -->
     <div class="modal" id="bookingCenter">
-        <div class="modal-content">
-            <h2>Book your stay</h2>
-            <p>Leave your contact details and we will reach out to you.</p>
-            <input type="text" placeholder="Your name">
-            <input type="email" placeholder="Email address">
-            <button onclick="closeBooking()">Send request</button>
+        <div class="booking-window">
+            <h2>Book Your Ski Pass</h2>
+
+            <label>Choose resort:</label>
+            <select id="resortSelect">
+                <option value="Bansko">Bansko</option>
+            </select>
+
+            <label>Choose pass type:</label>
+            <select id="passType">
+                <option value="standard">Standard Pass</option>
+                <option value="vip">VIP Pass</option>
+                <option value="family">Family Pass</option>
+            </select>
+
+            <label>Days:</label>
+            <input type="number" id="days" min="1" value="1" />
+
+            <label>Your level:</label>
+            <select id="level">
+                <option value="advanced">Advanced</option>
+            </select>
+
+            <div class="price-box">
+                <span>Total price:</span>
+                <strong id="totalPrice">0 €</strong>
+            </div>
+
+            <button class="confirm-btn" onclick="confirmBooking()">
+                Confirm Booking
+            </button>
+            <button class="close-btn" onclick="closeBookingCenter()">Close</button>
         </div>
     </div>
 
