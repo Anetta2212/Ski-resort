@@ -56,7 +56,7 @@ body {
 .main-image {
     height: 300px;
     border-radius: 16px;
-    background: url("https://i.postimg.cc/FKJkVVB6/images-(2).jpg") center / cover no-repeat;
+    background: url("https://i.postimg.cc/g2JcQ0yL/5406951131306463865.jpg") center / cover no-repeat;
     animation: slowZoom 12s infinite alternate;
     margin-bottom: 20px;
 }
@@ -120,27 +120,25 @@ body {
     left: 15px;
     font-weight: bold;
     color: #ffffff;
-    /* чисто білий */
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-    /* сильна тінь для контрасту */
     font-size: 18px;
 }
 
 /* Images */
 .img1 {
-    background-image: url("https://i.postimg.cc/4N56YPDP/images-(1).jpg");
+    background-image: url("https://i.postimg.cc/13YdKzY9/bansko1.jpg");
 }
 
 .img2 {
-    background-image: url("https://i.postimg.cc/5yCgtgF6/zermatt3.jpg");
+    background-image: url("https://i.postimg.cc/kg9ShNzw/bansko2.jpg");
 }
 
 .img3 {
-    background-image: url("https://i.postimg.cc/jdf3qxzy/zermatt4.jpg");
+    background-image: url("https://i.postimg.cc/bNqY76Yt/Bansko-Bulgaria-bulgaria-ski-skitripoutfits-skiing-skitrip-travel-europe.jpg");
 }
 
 .img4 {
-    background-image: url("https://i.postimg.cc/cHjKbczp/zermatt5.jpg");
+    background-image: url("https://i.postimg.cc/jSsWhxJY/bansko3.jpg");
 }
 
 /* Footer */
@@ -232,7 +230,6 @@ body {
 
     .main-image {
         height: 250px;
-        border-radius: 16px;
     }
 
     .header {
