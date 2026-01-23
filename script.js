@@ -246,6 +246,10 @@ function openResort(name) {
   if (name === "Chamonix") {
     window.location.href = "chamonix.html";
   }
+
+  if (name === "Zakopane") {
+    window.location.href = "zakopane.html";
+  }
 }
 
 
