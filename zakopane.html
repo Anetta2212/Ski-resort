@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bansko – Ski Resort</title>
+    <link rel="stylesheet" href="zakopane.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">🏔️ Zakopane</div>
+        <nav class="nav">
+            <button class="home-btn" onclick="goHome()">Home</button>
+            <button class="book-btn" onclick="openBooking('Zakopane')">Book now</button>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="left">
+            <div class="main-image"></div>
+
+            <div class="card">
+                <h2>Ski Conditions</h2>
+                <p>
+                    Zakopane features several ski areas, with the most popular being Kasprowy Wierch, Nosal, and
+                    Gubałówka. <br /><br />
+                    The slopes are mostly easy to intermediate, making the resort especially friendly for newcomers and
+                    families with children. <br /><br />
+                    The ski season usually lasts from December to March, and snowmaking systems help maintain good
+                    conditions even during warmer periods. <br /><br />
+                    While Zakopane doesn’t offer extreme or high altitude skiing, it provides a comfortable and
+                    enjoyable experience for recreational skiers.
+                </p>
+            </div>
+        </section>
+
+        <section class="right">
+            <div class="card">
+                <h2>Description</h2>
+                <p>
+                    Zakopane is the winter capital of Poland, a charming mountain town nestled at the foot of the Tatra
+                    Mountains. It blends traditional wooden architecture, warm local culture, and a relaxed atmosphere
+                    with modern ski facilities.<br /><br />
+                    This resort is perfect for beginners, families, and anyone who wants to enjoy peaceful skiing
+                    surrounded by beautiful alpine scenery.
+                    <br /><br />Beyond the slopes, Zakopane offers cozy restaurants, lively streets, and access to
+                    nearby thermal pools — making it an ideal destination for both skiing and relaxation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Facilities</h2>
+                <ul>
+                    <li>modern lifts across multiple ski areas</li>
+                    <li>equipment rental shops</li>
+                    <li>professional ski and snowboard schools</li>
+                    <li>night skiing on selected slopes</li>
+                    <li>easy access to ski zones from the town center</li>
+                </ul>
+            </div>
+        </section>
+
+
+
+        <section class="gallery">
+            <div class="img big img1"><span class="caption">Kasprowy Wierch — the highest ski point in Zakopane</span>
+            </div>
+            <div class="img img2"><span class="caption">Gubałówka — panoramic views of the Tatras</span></div>
+            <div class="img tall img3"><span class="caption">Traditional wooden houses of Zakopane</span></div>
+            <div class="img img4"><span class="caption">Night skiing at Polana Szymoszkowa</span></div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        © 2026 European Ski Resorts · Feel the Alps
+    </footer>
+
+    <!-- Booking modal -->
+    <div class="modal" id="bookingCenter">
+        <div class="booking-window">
+            <h2>Book Your Ski Pass</h2>
+
+            <label>Choose resort:</label>
+            <select id="resortSelect">
+                <option value="Zakopane">Zakopane</option>
+            </select>
+
+            <label>Choose pass type:</label>
+            <select id="passType">
+                <option value="standard">Standard Pass</option>
+                <option value="vip">VIP Pass</option>
+                <option value="family">Family Pass</option>
+            </select>
+
+            <label>Days:</label>
+            <input type="number" id="days" min="1" value="1" />
+
+            <label>Your level:</label>
+            <select id="level">
+                <option value="intermediate">Intermediate</option>
+            </select>
+
+            <div class="price-box">
+                <span>Total price:</span>
+                <strong id="totalPrice">0 €</strong>
+            </div>
+
+            <button class="confirm-btn" onclick="confirmBooking()">
+                Confirm Booking
+            </button>
+            <button class="close-btn" onclick="closeBookingCenter()">Close</button>
+        </div>
+    </div>
+
+    <script src="bansko.js"></script>
+</body>
+
+</html>
