@@ -297,3 +297,56 @@ function confirmBooking() {
 
   closeBookingCenter();
 }
+
+
+// ===== карусель фото =====
+const slider = document.querySelector('.slider');
+let autoInterval;
+
+// повертає масив поточних слайдів
+function getSlides() {
+  return Array.from(slider.querySelectorAll('div'));
+}
+
+function removeFirstSlideClass(slides) {
+  slides.forEach(slide => slide.classList.remove('firstSlide'));
+}
+
+function rotate() {
+  const slides = getSlides();
+  const lastChild = slides[slides.length - 1];
+
+  const clone = lastChild.cloneNode(true);
+
+  removeFirstSlideClass(slides);
+  slider.removeChild(lastChild);
+  slider.insertBefore(clone, slider.firstChild);
+
+  slider.firstElementChild.classList.add('firstSlide');
+}
+
+function rotateBack() {
+  const slides = getSlides();
+  const firstChild = slides[0];
+
+  const clone = firstChild.cloneNode(true);
+
+  removeFirstSlideClass(slides);
+  slider.removeChild(firstChild);
+  slider.appendChild(clone);
+
+  slider.lastElementChild.classList.add('firstSlide');
+}
+
+// автопрокрутка
+function startAuto() {
+  autoInterval = setInterval(rotate, 4000);
+}
+
+function resetAuto() {
+  clearInterval(autoInterval);
+  startAuto();
+}
+
+startAuto();
+
