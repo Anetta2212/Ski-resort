@@ -427,164 +427,265 @@ body {
 }
 
 /* ===== карусель фото ===== */
-.container {
-  width: 100vw;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container{
+  width:100vw;
+  height:80vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
-
 .slider {
   height: 750px;
-  width: 100vw;
+  width:100vw;
   display: flex;
   perspective: 1000px;
   position: relative;
-  align-items: center;
+  align-items:center;
 }
-
-.box1 {
-  background: url('https://i.postimg.cc/RCjCg2w3/0ac6b634f22359c31c95561150e9eddf.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.box2 {
-  background: url('https://i.postimg.cc/CLkhXJ4t/9ef9ee8b67e139165670412dde2d5c03.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.box3 {
-  background: url('https://i.postimg.cc/QdD8354k/Les-Gets.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.box4 {
-  background: url('https://i.postimg.cc/wBT9tzd9/ac403acd70b7401a015af78f7fed5a58.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.box5 {
-  background: url('https://i.postimg.cc/05JPKZhz/snoubordist.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.box6 {
-  background: url('https://i.postimg.cc/htKBwnvp/kraevid.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.box7 {
-  background: url('https://i.postimg.cc/DzM38bgZ/liznik.jpg');
-  background-size: cover;
-  background-position: center center;
-}
+.box1{      background:url('https://i.postimg.cc/RCjCg2w3/0ac6b634f22359c31c95561150e9eddf.jpg');
+  background-size:cover;
+  background-position:center center;}
+.box2{
+background:url('https://i.postimg.cc/CLkhXJ4t/9ef9ee8b67e139165670412dde2d5c03.jpg');
+  background-size:cover;
+  background-position:center center;}
+.box3{
+background:url('https://i.postimg.cc/QdD8354k/Les-Gets.jpg');
+  background-size:cover;
+  background-position:center center;}
+.box4{
+background:url('https://i.postimg.cc/wBT9tzd9/ac403acd70b7401a015af78f7fed5a58.jpg');
+  background-size:cover;
+  background-position:center center;}
+.box5{
+background:url('https://i.postimg.cc/05JPKZhz/snoubordist.jpg');
+  background-size:cover;
+  background-position:center center;}
+.box6{
+background:url('https://i.postimg.cc/htKBwnvp/kraevid.jpg');
+  background-size:cover;
+  background-position:center center;}
+.box7{
+background:url('https://i.postimg.cc/DzM38bgZ/liznik.jpg');
+  background-size:cover;
+  background-position:center center;}
 
 .slider [class*="box"] {
-  /*   float: left; */
+/*   float: left; */
   overflow: hidden;
-  border-radius: 20px;
+  border-radius:20px;
   transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  position: absolute;
+    position:absolute;
 }
-
 .slider [class*="box"]:nth-child(7),
 .slider [class*="box"]:nth-child(1) {
   width: 100vh;
   height: 60vh;
-  transform: scale(0.2) translate(-50%, -50%);
+  transform: scale(0.2) translate(-50%,-50%);
   top: 10%;
-  z-index: 1;
+  z-index:1;
 }
-
 .slider [class*="box"]:nth-child(2),
 .slider [class*="box"]:nth-child(6) {
   width: 100vh;
   height: 60vh;
-  transform: scale(0.4) translate(-50%, -50%);
+  transform: scale(0.4) translate(-50%,-50%);
   top: 20%;
-  z-index: 2;
+  z-index:2;
 }
-
 .slider [class*="box"]:nth-child(3),
 .slider [class*="box"]:nth-child(5) {
   width: 100vh;
   height: 60vh;
-  transform: scale(0.6) translate(-50%, -50%);
+  transform: scale(0.6) translate(-50%,-50%);
   top: 30%;
-  z-index: 3;
+  z-index:3;
 }
-
 .slider [class*="box"]:nth-child(4) {
   width: 60vw;
   height: 60vh;
   border-color: #c92026;
   color: #fff;
-  transform: scale(1) translate(-50%, -50%);
+  transform: scale(1) translate(-50%,-50%);
   top: 50%;
-  z-index: 4;
+  z-index:4;
 }
-
-.slider [class*="box"]:nth-child(1) {
-  left: -13%;
-}
-
-.slider [class*="box"]:nth-child(2) {
-  left: -5%;
-}
-
-.slider [class*="box"]:nth-child(3) {
-  left: 10%;
-}
-
-.slider [class*="box"]:nth-child(4) {
-  left: 50%;
-}
-
-.slider [class*="box"]:nth-child(5) {
-  left: 71%;
-}
-
-.slider [class*="box"]:nth-child(6) {
-  left: 85%;
-}
-
-.slider [class*="box"]:nth-child(7) {
-  left: 100%;
-}
-
+.slider [class*="box"]:nth-child(1){
+  left:-13%;}
+.slider [class*="box"]:nth-child(2){
+  left:-5%;}
+.slider [class*="box"]:nth-child(3){
+  left:10%;}
+.slider [class*="box"]:nth-child(4){
+  left:50%;}
+.slider [class*="box"]:nth-child(5){
+  left:71%;}
+.slider [class*="box"]:nth-child(6){
+  left:85%;}
+.slider [class*="box"]:nth-child(7){
+  left:100%;}
 .slider .firstSlide {
-  -webkit-animation: firstChild 1s;
-  animation: firstChild 1s;
+    -webkit-animation:  firstChild 1s;
+    animation:  firstChild 1s;
 }
-
 /*Animation for buyers landing page slider*/
 @-webkit-keyframes firstChild {
-  0% {
-    left: 100%;
-    transform: scale(0.2) translate(-50%, -50%);
-  }
-
-  100% {
-    left: -13%;
-    transform: scale(0.2) translate(-50%, -50%);
-  }
+    0% {left:100%; transform: scale(0.2) translate(-50%,-50%);}
+    100% {left: -13%; transform: scale(0.2) translate(-50%,-50%);}
+}
+@keyframes firstChild {
+   0% {left:100%; transform: scale(0.2) translate(-50%,-50%);}
+    100% {left: -13%; transform: scale(0.2) translate(-50%,-50%);}
 }
 
-@keyframes firstChild {
-  0% {
-    left: 100%;
-    transform: scale(0.2) translate(-50%, -50%);
-  }
+.photo  {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-left: 100px;
+  font-size: 30px;
+}
 
-  100% {
-    left: -13%;
-    transform: scale(0.2) translate(-50%, -50%);
-  }
+
+/* -----------------відгуки---------------- */
+.real-reviews {
+  margin: 60px 0;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.real-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 35px;
+}
+
+/* Сітка з природною асиметрією */
+.real-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+/* Картка виглядає як реальний коментар */
+.real-card {
+  background: #0c1d33;
+  padding: 22px;
+  border-radius: 16px;
+  color: #e8f0ff;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  position: relative;
+  transform: translateY(0);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Легкий "рукописний" стиль імені */
+.real-name {
+  font-size: 15px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  opacity: 0.9;
+  font-family: "Segoe Script", "Comic Sans MS", cursive;
+}
+
+/* Аватарка — робить коментар живим */
+.real-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+/* Текст виглядає як справжній коментар */
+.real-text {
+  font-size: 15px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* WOW‑ефект при наведенні */
+.real-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+}
+
+/* Легкий блиск */
+.real-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.real-card:hover::after {
+  opacity: 1;
+}
+
+
+
+/*-----------------футер------------------------------*/
+.site-footer {
+  background: linear-gradient(180deg, #07101f, #0b1d33);
+  padding: 50px 0 20px;
+  color: #dce6f5;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+  filter: blur(40px);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+.footer-col p {
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #dce6f5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #7ab8ff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  opacity: 0.6;
+  font-size: 14px;
 }
