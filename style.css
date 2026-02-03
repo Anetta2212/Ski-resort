@@ -538,6 +538,19 @@ background:url('https://i.postimg.cc/DzM38bgZ/liznik.jpg');
     100% {left: -13%; transform: scale(0.2) translate(-50%,-50%);}
 }
 
+
+@media (max-width: 600px) {
+  .slider [class*="box"] {
+    width: 90vw;
+    height: 55vh;
+  }
+
+  .slider .pos4 {
+    transform: scale(1.1) translate(-50%, -50%);
+  }
+}
+
+
 .photo  {
   margin-top: 50px;
   margin-bottom: 30px;
@@ -689,3 +702,4 @@ background:url('https://i.postimg.cc/DzM38bgZ/liznik.jpg');
   opacity: 0.6;
   font-size: 14px;
 }
+
