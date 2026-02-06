@@ -300,54 +300,52 @@ function confirmBooking() {
 
 
 // ===== карусель фото =====
-const slider = document.querySelector('.slider');
-let autoInterval;
+const track = document.querySelector('.hero-gallery__track');
+const slides = Array.from(document.querySelectorAll('.hero-slide'));
+const btnPrev = document.querySelector('.hero-gallery__arrow--left');
+const btnNext = document.querySelector('.hero-gallery__arrow--right');
+const dotsContainer = document.querySelector('.hero-gallery__dots');
+const dots = Array.from(document.querySelectorAll('.hero-dot'));
 
-// повертає масив поточних слайдів
-function getSlides() {
-  return Array.from(slider.querySelectorAll('div'));
+let currentIndex = 0;
+
+function updateGallery(index) {
+  currentIndex = (index + slides.length) % slides.length;
+
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('hero-slide--active', i === currentIndex);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('hero-dot--active', i === currentIndex);
+  });
+
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-function removeFirstSlideClass(slides) {
-  slides.forEach(slide => slide.classList.remove('firstSlide'));
-}
+btnNext.addEventListener('click', () => {
+  updateGallery(currentIndex + 1);
+});
 
-function rotate() {
-  const slides = getSlides();
-  const lastChild = slides[slides.length - 1];
+btnPrev.addEventListener('click', () => {
+  updateGallery(currentIndex - 1);
+});
 
-  const clone = lastChild.cloneNode(true);
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => updateGallery(i));
+});
 
-  removeFirstSlideClass(slides);
-  slider.removeChild(lastChild);
-  slider.insertBefore(clone, slider.firstChild);
+// Автоплей (можеш прибрати, якщо не треба)
+let autoplay = setInterval(() => {
+  updateGallery(currentIndex + 1);
+}, 6000);
 
-  slider.firstElementChild.classList.add('firstSlide');
-}
+track.addEventListener('mouseenter', () => clearInterval(autoplay));
+track.addEventListener('mouseleave', () => {
+  autoplay = setInterval(() => {
+    updateGallery(currentIndex + 1);
+  }, 6000);
+});
 
-function rotateBack() {
-  const slides = getSlides();
-  const firstChild = slides[0];
-
-  const clone = firstChild.cloneNode(true);
-
-  removeFirstSlideClass(slides);
-  slider.removeChild(firstChild);
-  slider.appendChild(clone);
-
-  slider.lastElementChild.classList.add('firstSlide');
-}
-
-// автопрокрутка
-function startAuto() {
-  autoInterval = setInterval(rotate, 4000);
-}
-
-function resetAuto() {
-  clearInterval(autoInterval);
-  startAuto();
-}
-
-startAuto();
-
+updateGallery(0);
 
