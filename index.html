@@ -212,18 +212,69 @@
 
   <!-- ===== карусель ===== -->
   <h2 class="photo" id="gallery">Gallery</h2>
-  <div class="container">
-    <div class="slider">
-      <div class="box1"></div>
-      <div class="box2"></div>
-      <div class="box3"></div>
-      <div class="box4"></div>
-      <div class="box5"></div>
-      <div class="box6"></div>
-      <div class="box7"></div>
+  <div class="hero-gallery">
+  <div class="hero-gallery__inner">
+    <button class="hero-gallery__arrow hero-gallery__arrow--left" aria-label="Previous slide">
+      &#10094;
+    </button>
+
+    <div class="hero-gallery__track">
+      <div class="hero-slide hero-slide--active">
+        <div class="hero-slide__image-wrapper">
+          <img src="https://i.ibb.co/VYr9sv9H/ac403acd70b7401a015af78f7fed5a58.jpg" alt="Slide 1" class="hero-slide__image">
+        </div>
+        <div class="hero-slide__content">
+          <h2 class="hero-slide__title">For Your Current Mood</h2>
+          <button class="hero-slide__btn">Listen</button>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <div class="hero-slide__image-wrapper">
+          <img src="https://i.ibb.co/ZrvNRZk/image.jpg" alt="Slide 2" class="hero-slide__image">
+        </div>
+        <div class="hero-slide__content">
+          <h2 class="hero-slide__title">In The Wilderness</h2>
+          <button class="hero-slide__btn">Book travel</button>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <div class="hero-slide__image-wrapper">
+          <img src="https://i.ibb.co/Rktk1CRB/image.jpg" alt="Slide 3" class="hero-slide__image">
+        </div>
+        <div class="hero-slide__content">
+          <h2 class="hero-slide__title">Focus On The Writing</h2>
+          <button class="hero-slide__btn">Get focused</button>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <div class="hero-slide__image-wrapper">
+          <img src="https://i.ibb.co/0Py63Z0/0ac6b634f22359c31c95561150e9eddf.jpg" alt="Slide 2" class="hero-slide__image">
+        </div>
+        <div class="hero-slide__content">
+          <h2 class="hero-slide__title">In The Wilderness</h2>
+          <button class="hero-slide__btn">Book travel</button>
+        </div>
+      </div>
     </div>
+
+
+    <button class="hero-gallery__arrow hero-gallery__arrow--right" aria-label="Next slide">
+      &#10095;
+    </button>
   </div>
-  <div id="test"></div>
+
+  <div class="hero-gallery__dots">
+    <button class="hero-dot hero-dot--active"></button>
+    <button class="hero-dot"></button>
+    <button class="hero-dot"></button>
+    <button class="hero-dot"></button>
+  </div>
+</div>
+
+
 
 
   <section class="real-reviews" id="reviews">
