@@ -509,27 +509,20 @@ body {
 }
 
 .hero-slide__btn {
-  border: none;
-  padding: 10px 22px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #6D64F7, #9C6BFF);
+  background: rgba(0,0,0,0.7);
   color: #fff;
-  font-size: 14px;
-  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
   cursor: pointer;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  box-shadow: 0 10px 25px rgba(109,100,247,0.55);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .hero-slide__btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 14px 32px rgba(109,100,247,0.7);
+  background: rgba(0,0,0,0.9);
 }
+
+
 
 .hero-slide__btn:active {
   transform: translateY(1px);
