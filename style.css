@@ -427,117 +427,167 @@ body {
 }
 
 /* ===== карусель фото ===== */
-.container{
-  width:100vw;
-  height:80vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+.container {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .slider {
   height: 750px;
-  width:100vw;
+  width: 100vw;
   display: flex;
   perspective: 1000px;
   position: relative;
-  align-items:center;
+  align-items: center;
 }
-.box1{      background:url('https://i.postimg.cc/RCjCg2w3/0ac6b634f22359c31c95561150e9eddf.jpg');
-  background-size:cover;
-  background-position:center center;}
-.box2{
-background:url('https://i.postimg.cc/CLkhXJ4t/9ef9ee8b67e139165670412dde2d5c03.jpg');
-  background-size:cover;
-  background-position:center center;}
-.box3{
-background:url('https://i.postimg.cc/QdD8354k/Les-Gets.jpg');
-  background-size:cover;
-  background-position:center center;}
-.box4{
-background:url('https://i.postimg.cc/wBT9tzd9/ac403acd70b7401a015af78f7fed5a58.jpg');
-  background-size:cover;
-  background-position:center center;}
-.box5{
-background:url('https://i.postimg.cc/05JPKZhz/snoubordist.jpg');
-  background-size:cover;
-  background-position:center center;}
-.box6{
-background:url('https://i.postimg.cc/htKBwnvp/kraevid.jpg');
-  background-size:cover;
-  background-position:center center;}
-.box7{
-background:url('https://i.postimg.cc/DzM38bgZ/liznik.jpg');
-  background-size:cover;
-  background-position:center center;}
+
+.box1 {
+  background: url('https://i.postimg.cc/RCjCg2w3/0ac6b634f22359c31c95561150e9eddf.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.box2 {
+  background: url('https://i.postimg.cc/CLkhXJ4t/9ef9ee8b67e139165670412dde2d5c03.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.box3 {
+  background: url('https://i.postimg.cc/QdD8354k/Les-Gets.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.box4 {
+  background: url('https://i.postimg.cc/wBT9tzd9/ac403acd70b7401a015af78f7fed5a58.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.box5 {
+  background: url('https://i.postimg.cc/05JPKZhz/snoubordist.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.box6 {
+  background: url('https://i.postimg.cc/htKBwnvp/kraevid.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.box7 {
+  background: url('https://i.postimg.cc/DzM38bgZ/liznik.jpg');
+  background-size: cover;
+  background-position: center center;
+}
 
 .slider [class*="box"] {
-/*   float: left; */
+  /*   float: left; */
   overflow: hidden;
-  border-radius:20px;
+  border-radius: 20px;
   transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-    position:absolute;
+  position: absolute;
 }
+
 .slider [class*="box"]:nth-child(7),
 .slider [class*="box"]:nth-child(1) {
   width: 100vh;
   height: 60vh;
-  transform: scale(0.2) translate(-50%,-50%);
+  transform: scale(0.2) translate(-50%, -50%);
   top: 10%;
-  z-index:1;
+  z-index: 1;
 }
+
 .slider [class*="box"]:nth-child(2),
 .slider [class*="box"]:nth-child(6) {
   width: 100vh;
   height: 60vh;
-  transform: scale(0.4) translate(-50%,-50%);
+  transform: scale(0.4) translate(-50%, -50%);
   top: 20%;
-  z-index:2;
+  z-index: 2;
 }
+
 .slider [class*="box"]:nth-child(3),
 .slider [class*="box"]:nth-child(5) {
   width: 100vh;
   height: 60vh;
-  transform: scale(0.6) translate(-50%,-50%);
+  transform: scale(0.6) translate(-50%, -50%);
   top: 30%;
-  z-index:3;
+  z-index: 3;
 }
+
 .slider [class*="box"]:nth-child(4) {
   width: 60vw;
   height: 60vh;
   border-color: #c92026;
   color: #fff;
-  transform: scale(1) translate(-50%,-50%);
+  transform: scale(1) translate(-50%, -50%);
   top: 50%;
-  z-index:4;
-}
-.slider [class*="box"]:nth-child(1){
-  left:-13%;}
-.slider [class*="box"]:nth-child(2){
-  left:-5%;}
-.slider [class*="box"]:nth-child(3){
-  left:10%;}
-.slider [class*="box"]:nth-child(4){
-  left:50%;}
-.slider [class*="box"]:nth-child(5){
-  left:71%;}
-.slider [class*="box"]:nth-child(6){
-  left:85%;}
-.slider [class*="box"]:nth-child(7){
-  left:100%;}
-.slider .firstSlide {
-    -webkit-animation:  firstChild 1s;
-    animation:  firstChild 1s;
-}
-/*Animation for buyers landing page slider*/
-@-webkit-keyframes firstChild {
-    0% {left:100%; transform: scale(0.2) translate(-50%,-50%);}
-    100% {left: -13%; transform: scale(0.2) translate(-50%,-50%);}
-}
-@keyframes firstChild {
-   0% {left:100%; transform: scale(0.2) translate(-50%,-50%);}
-    100% {left: -13%; transform: scale(0.2) translate(-50%,-50%);}
+  z-index: 4;
 }
 
+.slider [class*="box"]:nth-child(1) {
+  left: -13%;
+}
+
+.slider [class*="box"]:nth-child(2) {
+  left: -5%;
+}
+
+.slider [class*="box"]:nth-child(3) {
+  left: 10%;
+}
+
+.slider [class*="box"]:nth-child(4) {
+  left: 50%;
+}
+
+.slider [class*="box"]:nth-child(5) {
+  left: 71%;
+}
+
+.slider [class*="box"]:nth-child(6) {
+  left: 85%;
+}
+
+.slider [class*="box"]:nth-child(7) {
+  left: 100%;
+}
+
+.slider .firstSlide {
+  -webkit-animation: firstChild 1s;
+  animation: firstChild 1s;
+}
+
+/*Animation for buyers landing page slider*/
+@-webkit-keyframes firstChild {
+  0% {
+    left: 100%;
+    transform: scale(0.2) translate(-50%, -50%);
+  }
+
+  100% {
+    left: -13%;
+    transform: scale(0.2) translate(-50%, -50%);
+  }
+}
+
+@keyframes firstChild {
+  0% {
+    left: 100%;
+    transform: scale(0.2) translate(-50%, -50%);
+  }
+
+  100% {
+    left: -13%;
+    transform: scale(0.2) translate(-50%, -50%);
+  }
+}
 
 @media (max-width: 600px) {
   .slider [class*="box"] {
@@ -551,7 +601,7 @@ background:url('https://i.postimg.cc/DzM38bgZ/liznik.jpg');
 }
 
 
-.photo  {
+.photo {
   margin-top: 50px;
   margin-bottom: 30px;
   margin-left: 100px;
@@ -585,7 +635,7 @@ background:url('https://i.postimg.cc/DzM38bgZ/liznik.jpg');
   padding: 22px;
   border-radius: 16px;
   color: #e8f0ff;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
   position: relative;
   transform: translateY(0);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -607,7 +657,7 @@ background:url('https://i.postimg.cc/DzM38bgZ/liznik.jpg');
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
-  border: 2px solid rgba(255,255,255,0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Текст виглядає як справжній коментар */
@@ -620,7 +670,7 @@ background:url('https://i.postimg.cc/DzM38bgZ/liznik.jpg');
 /* WOW‑ефект при наведенні */
 .real-card:hover {
   transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
 }
 
 /* Легкий блиск */
@@ -628,7 +678,7 @@ background:url('https://i.postimg.cc/DzM38bgZ/liznik.jpg');
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent 60%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 60%);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -655,7 +705,7 @@ background:url('https://i.postimg.cc/DzM38bgZ/liznik.jpg');
   left: 0;
   width: 100%;
   height: 80px;
-  background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 70%);
   filter: blur(40px);
 }
 
@@ -702,4 +752,3 @@ background:url('https://i.postimg.cc/DzM38bgZ/liznik.jpg');
   opacity: 0.6;
   font-size: 14px;
 }
-
